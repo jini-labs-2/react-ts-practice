@@ -3,7 +3,7 @@ import Todo from './pages/Todo';
 
 function App() {
   return (
-    <div className='app'>
+    <div className='app' style={{backgroundColor: "#ccd", width: "1024px", height: "100vh", margin: "0 auto"}}>
       <Todo />
     </div>
   );
