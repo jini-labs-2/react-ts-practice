@@ -1,9 +1,14 @@
 import React from 'react';
+import Todo from './pages/Todo';
+import User from './pages/User';
+import Photo from './pages/Photo';
 
 function App() {
   return (
     <div className='app'>
-      App
+      <Todo />
+      <User />
+      <Photo />
     </div>
   );
 }
