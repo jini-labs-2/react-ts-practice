@@ -1,11 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import Todo from './pages/Todo';
+import store from './stores/store';
+import Counter from './pages/Counter';
 
 function App() {
   return (
-    <div className='app'>
-      <Todo />
-    </div>
+    <Provider store={store}>
+      <div className='app'>
+        <Counter />
+        <Todo />
+      </div>
+    </Provider>
   );
 }
 
