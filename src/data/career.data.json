@@ -17,7 +17,10 @@
     "department": ["業務プロセスに基づいたシステムの要件分析"]
   },
   "aboutMe": {
-    "document": ["1.", "2."]
+    "document": [
+      "1.バックエンド側の仕事を主にUnix上でC言語を中心に", 
+      "2.ウェブ系プロジェクトのリーダーとして取引ツール販売"
+    ]
   },
   "careerHist": [{
     "period": {
@@ -35,7 +38,54 @@
     "proces": [{
       "name": "詳細設計",
       "ativation": true
-    }]
+    }],
+    "detail": {
+      "working":[
+        "Nodeのバージョンアップ（16.x -> 20.x)",
+        "Monorepoバージョンアップ",
+        "バッチのパフォーマンス改善",
+        "管理者ページ開発"
+      ],
+      "earnedSkill": [
+        "Monorepo開発環境についてTurborepoに触れました、",
+        "TanStack Table/Routerに触れました。"
+      ],
+      "comment": [
+        "Firebaseを利用すると安全なユーザーログイン、SNSログイン、データ保存管理、FE・BEの一環した開発・管理が出来ます"
+      ]
+    }
+  }, {
+    "period": {
+      "start": "2021-01-01T00:00:00Z",
+      "end": "2022-01-01T00:00:00Z"
+    },
+    "role": "SE",
+    "teamMembers": 5,
+    "projectMembers": 5,
+    "lang": ["Javascript","Typescript"],
+    "database": ["DynamoDB", "Mysql"],
+    "osCloud": ["aws","ecs"],
+    "frame": ["Nodejs","Expressjs","Reactjs"],
+    "etc": ["docker","Github","githubAction","slac"],
+    "proces": [{
+      "name": "詳細設計",
+      "ativation": true
+    }],
+    "detail": {
+      "working":[
+        "Nodeのバージョンアップ（16.x -> 20.x)",
+        "Monorepoバージョンアップ",
+        "バッチのパフォーマンス改善",
+        "管理者ページ開発"
+      ],
+      "earnedSkill": [
+        "Monorepo開発環境についてTurborepoに触れました、",
+        "TanStack Table/Routerに触れました。"
+      ],
+      "comment": [
+        "Firebaseを利用すると安全なユーザーログイン、SNSログイン、データ保存管理、FE・BEの一環した開発・管理が出来ます"
+      ]
+    }
   }],
   "myProject": [{
     "period": {

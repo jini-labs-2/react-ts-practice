@@ -10,13 +10,13 @@ const asyncFetchCareerInfo = createAsyncThunk('careerSlice/asyncFetchCareerInfo'
 export const careerSlice = createSlice({
   name: "careerSlice",
   initialState: {
-    careerInfo: {},
+    careerInfo: {} as CareerInfo,
     status: 'init'
   },
   reducers: {
     resset: (state, action) => {
       console.log('-reset-', action);
-      state.careerInfo = {};
+      state.careerInfo = {} as CareerInfo;
       state.status = 'reseted';
     }
   },
@@ -27,7 +27,7 @@ export const careerSlice = createSlice({
     })
     builder.addCase(asyncFetchCareerInfo.fulfilled, (state, action) => {
       console.log('--complete--', action);
-      state.careerInfo = action.payload as CareerInfo;
+      state.careerInfo = action.payload as unknown as CareerInfo;
       state.status = 'complete';
     })
     builder.addCase(asyncFetchCareerInfo.rejected, (state, action) => {

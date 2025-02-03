@@ -37,6 +37,12 @@ export interface ProcessCategory {
 	ativation: boolean;
 }
 
+export interface ProjectDetail {
+	working: string[],
+	earnedSkill: string[],
+	comment: string[],
+}
+
 export interface CareerHistory {
 	period: Period;
 	role: ProjectRole;
@@ -48,6 +54,7 @@ export interface CareerHistory {
 	frame: string[]; // ['Nodejs','Expressjs','Reactjs']
 	etc: string[]; // ['docker','Github','githubAction','slac']
 	proces: ProcessCategory[]; // [{name:'要件定義',activation: true} as ProcessCategory]
+	detail?: ProjectDetail[];
 }
 
 // 個人プロジェクト用
