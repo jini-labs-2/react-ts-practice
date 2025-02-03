@@ -4,7 +4,7 @@ import Todo from './pages/Todo';
 import store from './stores/store';
 import Counter from './pages/Counter';
 import User from './pages/User';
-
+import Career from './pages/Career';
 function App() {
   return (
     <Provider store={store}>
@@ -14,6 +14,8 @@ function App() {
         <Todo />
         <hr />
         <User />
+        <hr />
+        <Career />
       </div>
     </Provider>
   );

@@ -1,0 +1,60 @@
+{
+  "baseInfo": {
+    "infoDate": "2025-02-01T00:00:00Z",
+    "birth": "1972-08-05T00:00:00Z",
+    "sex": "male",
+    "graduated": "韓国　私立大学校 コンピュータ工学課",
+    "certification": [{
+        "name": "情報処理技師1級",
+        "certificator": "韓国産業人力管理公団",
+        "date": "1996-07"
+    }],
+    "nearStation": "小田急線相模大野駅"
+  },
+  "skills": {
+    "category": "バックエンド",
+    "skills": ["Nodejs","Typescript","Javascript"],
+    "department": ["業務プロセスに基づいたシステムの要件分析"]
+  },
+  "aboutMe": {
+    "document": ["1.", "2."]
+  },
+  "careerHist": [{
+    "period": {
+      "start": "2021-01-01T00:00:00Z",
+      "end": "2022-01-01T00:00:00Z"
+    },
+    "role": "SE",
+    "teamMembers": 5,
+    "projectMembers": 5,
+    "lang": ["Javascript","Typescript"],
+    "database": ["DynamoDB", "Mysql"],
+    "osCloud": ["aws","ecs"],
+    "frame": ["Nodejs","Expressjs","Reactjs"],
+    "etc": ["docker","Github","githubAction","slac"],
+    "proces": [{
+      "name": "詳細設計",
+      "ativation": true
+    }]
+  }],
+  "myProject": [{
+    "period": {
+      "start": "2021-01-01T00:00:00Z",
+      "end": "2022-01-01T00:00:00Z"
+    },
+    "lang": ["Javascript"],
+    "database": ["json file"],
+    "osCloud": ["XServer"],
+    "purpose": ["学習"],
+    "learnedSkill": ["javasc","typesc"],
+    "comment": ["yoi","ok"],
+    "ref": {
+      "url": "https://abcdefg.com",
+      "screenShot": {
+        "screenShotAlt": "ff's sample screen",
+        "filename": "ff--name.png",
+        "url": "https://abc.com"
+      }
+    }
+  }]
+}

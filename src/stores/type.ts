@@ -6,11 +6,11 @@ export interface Certification {
 }
 
 export interface BaseInfo {
-	infoDate: 'string'; // '2025-02-01T00:00:00Z'
+	infoDate: string; // '2025-02-01T00:00:00Z'
 	birth: string; // '1972-08-05T00:00:00Z'
 	sex: string; //'male'
-	graduated: string; // '韓国　私立大学校 コンピュータ工学課
-	certification:Certification[];
+	graduated: string; // '韓国私立大学校 コンピュータ工学課
+	certification?: Certification[];
 	nearStation: string; // '小田急線相模大野駅'
 }
 
@@ -75,8 +75,8 @@ export interface CareerInfo {
   baseInfo: BaseInfo;
   skills: SkillInfo;
   aboutMe: AboutMe;
-  careerHist: CareerHistory;
-  myProject: MyProject;
+  careerHist: CareerHistory[];
+  myProject?: MyProject[];
 }
 
 export interface UserInfo {
