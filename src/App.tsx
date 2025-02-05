@@ -6,15 +6,17 @@ import Career from './pages/Career';
 
 function App() {
   return (
-    <div id="wrap" className='app'>
-      {/* <Counter />
-      <hr />
-      <Todo />
-      <hr />
-      <User /> */}
-      <hr />
-      <Career />
-    </div>
+    <>
+      <div id="wrap" className='app'>
+        {/* <Counter />
+        <hr />
+        <Todo />
+        <hr />
+        <User /> */}
+        <hr />
+        <Career />
+      </div>
+    </>
   );
 }
 
