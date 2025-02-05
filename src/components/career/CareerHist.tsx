@@ -6,9 +6,23 @@ export interface CareerHistProps {
 }
 
 const CareerHist = ({careerHist}: CareerHistProps) => {
+  const projectIds: number[] | null = careerHist ? careerHist.map(item => item.no) : null;
   return (
     <div>
-      <h2>プロジェクト履歴</h2>
+      <h2 id="careerHistTop">プロジェクト履歴</h2>
+      <div style={{textAlign: "right"}}>
+        {careerHist
+         ?  (projectIds
+              ? projectIds.map((id, index) => (
+                <div key={index} style={{display: "inline", padding: "4px 8px", margin: "4px", color: "blue", backgroundColor: "#ddd", borderRadius: "10px"}}>
+                  <a href={`#projectId-${id}`}
+                  >{id}</a>
+                </div>
+              ))
+              : '')
+         : ''
+        }
+      </div>
       {careerHist ? ( 
       <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
       <thead>
@@ -27,9 +41,11 @@ const CareerHist = ({careerHist}: CareerHistProps) => {
         {careerHist.map((item, index) => (
           <tr key={index}>
             {/* No */}
-            <td>
+            <td id={`projectId-${item.no}`}>
               <strong>
-                {item.no}
+                <a href={"#careerHistTop"}>
+                  {item.no}
+                </a>
               </strong>
             </td>
             {/* Period */}
