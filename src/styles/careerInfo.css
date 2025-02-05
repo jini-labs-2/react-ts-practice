@@ -29,6 +29,7 @@ td {
   overflow: hidden;
   /*text-overflow: ellipsis;*/ /* 長すぎる内容は「...」で表示 */
   /*white-space: nowrap;*/ /* 改行を防ぐ（必要に応じて調整） */
+  word-break: break-all;
 }
 
 .th-depth-1 {
@@ -36,6 +37,7 @@ td {
 }
 .label-bgcolor {
   background-color: #34b1eb;
+  text-align: right;
 }
 .sublabel-bgcolor {
   background-color:rgb(199, 230, 244);

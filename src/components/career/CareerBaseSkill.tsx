@@ -18,7 +18,13 @@ const CareerBaseSkill = ({careerBaseSkill}: CareerBaseSkillProps) => {
           <tr>
             <th className="label-bgcolor">得意分野</th>
             <td>
-              <table border={1} cellPadding={5} cellSpacing={0}>
+              {careerBaseSkill.skills.map((dept, index) => (
+                <div key={index} style={{display: "inline"}}>
+                  <label style={{margin: "8px", padding:"8px", backgroundColor: "#ddd", borderRadius: "10px"}}
+                  >{dept}</label>
+                </div>
+              ))}
+              {/* <table border={1} cellPadding={5} cellSpacing={0}>
                 <tbody>
                   {careerBaseSkill.skills.map((skill, index) => (
                     <tr key={index}>
@@ -26,21 +32,17 @@ const CareerBaseSkill = ({careerBaseSkill}: CareerBaseSkillProps) => {
                     </tr>
                   ))}
                 </tbody>
-              </table>
+              </table> */}
             </td>
           </tr>
           <tr>
             <th className="label-bgcolor">得意業務</th>
             <td>
-              <table border={1} cellPadding={5} cellSpacing={0}>
-                <tbody>
-                  {careerBaseSkill.department.map((dept, index) => (
-                    <tr key={index}>
-                      <td>{dept}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              {careerBaseSkill.department.map((dept, index) => (
+                <div key={index}>
+                  <li>{dept}</li>
+                </div>
+              ))}
             </td>
           </tr>
         </tbody>

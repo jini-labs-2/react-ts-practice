@@ -6,8 +6,9 @@ export interface Certification {
 }
 
 export interface BaseInfo {
-	infoDate: string; // '2025-02-01T00:00:00Z'
-	birth: string; // '1972-08-05T00:00:00Z'
+	infoDate: string; // '2025-02-01'
+	birth: string; // '1972-08-05'
+	age: string;
 	sex: string; //'male'
 	graduated: string; // '韓国私立大学校 コンピュータ工学課
 	certification?: Certification[];

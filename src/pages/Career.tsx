@@ -9,7 +9,7 @@ const Career = () => {
   const careerInfo = useSelector((state: RootState) => state.career.careerInfo)
   return (
     <>
-      <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", margin: "1rem"}}>
+      <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem"}}>
         <h2>About Me (career list)</h2>
         <button
           onClick={() => {

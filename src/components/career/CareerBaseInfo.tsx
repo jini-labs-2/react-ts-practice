@@ -15,7 +15,7 @@ const CareerBaseInfo = ({careerBaseInfo}: CareerBaseInfoProps) => {
           <tbody>
             <tr>
               <th className="th-depth-1 label-bgcolor">年齢</th>
-              <td>{careerBaseInfo.birth}</td>
+              <td>{careerBaseInfo.age}</td>
             </tr>
             <tr>
               <th className="label-bgcolor">性別</th>
