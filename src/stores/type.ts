@@ -44,7 +44,9 @@ export interface ProjectDetail {
 }
 
 export interface CareerHistory {
+	no: number;
 	period: Period;
+	projectName: string;
 	role: ProjectRole;
 	teamMembers: number
 	projectMembers: number;
@@ -53,8 +55,8 @@ export interface CareerHistory {
 	osCloud: string[]; // ['aws','ecs']
 	frame: string[]; // ['Nodejs','Expressjs','Reactjs']
 	etc: string[]; // ['docker','Github','githubAction','slac']
-	proces: ProcessCategory[]; // [{name:'要件定義',activation: true} as ProcessCategory]
-	detail?: ProjectDetail[];
+	process: ProcessCategory[]; // [{name:'要件定義',activation: true} as ProcessCategory]
+	detail?: ProjectDetail;
 }
 
 // 個人プロジェクト用
@@ -68,12 +70,11 @@ export interface ProjectRef {
 }
 
 export interface MyProject {
-	period: Period,
-	lang: string[]; // ['Javascript',]
-	database: string[]; // ['json file']
-	osCloud: string[]; // ['XServer']
+	no: number;
+	period: Period;
+	projectName: string;
+	developEnv: string | string[];
 	purpose: string | string[]; // 
-	learnedSkill: string | string[];
 	comment: string | string[];
   ref: ProjectRef;
 }
@@ -83,7 +84,7 @@ export interface CareerInfo {
   skills: SkillInfo;
   aboutMe: AboutMe;
   careerHist: CareerHistory[];
-  myProject?: MyProject[];
+  myProject: MyProject[];
 }
 
 export interface UserInfo {

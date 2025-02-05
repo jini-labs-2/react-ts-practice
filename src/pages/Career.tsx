@@ -8,16 +8,19 @@ const Career = () => {
   const dispatch = useDispatch<AppDispatch>();
   const careerInfo = useSelector((state: RootState) => state.career.careerInfo)
   return (
-    <div>
-      <h2>get career list from place holder</h2>
-      <button
-        onClick={() => {
-          dispatch(asyncFetchCareerInfo())
-        }}
-      >get</button>
-      {careerInfo ? JSON.stringify(careerInfo): ''}
+    <>
+      <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "2rem", margin: "1rem"}}>
+        <h2>About Me (career list)</h2>
+        <button
+          onClick={() => {
+            dispatch(asyncFetchCareerInfo())
+          }}
+          className='carreer-get-button'
+        >経歴読み込み</button>
+        {/* {careerInfo ? JSON.stringify(careerInfo): ''} */}
+      </div>
       <CareerView career={careerInfo} />
-    </div>
+    </>
   )
 }
 

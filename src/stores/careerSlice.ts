@@ -3,7 +3,11 @@ import { CareerInfo } from "./type"
 //import careerInfo from "../data/career.data.json"
 import careerInfo from "../data/career.data.json"
 
+const fileId = "1jBZ02TBKlAl1Z3uiECEmsvH1MRd5N7R9";
 const asyncFetchCareerInfo = createAsyncThunk('careerSlice/asyncFetchCareerInfo', async() => {
+  // const res = await fetch(`https://drive.google.com/uc?export=download&id=${fileId}`);
+  // const data = await res.json();
+  // return data;
   return careerInfo;
 })
 

@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+li {
+  list-style: none;
+}
+body {
+  background-color:rgb(245, 250, 245);
+}
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}

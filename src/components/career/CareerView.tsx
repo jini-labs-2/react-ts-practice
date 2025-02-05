@@ -4,6 +4,7 @@ import CareerBaseInfo from './CareerBaseInfo'
 import CareerBaseSkill from './CareerBaseSkill'
 import CareerIntroduce from './CareerIntroduce'
 import CareerHist from './CareerHist'
+import CareerIndivisual from './CareerIndivisual'
 
 export interface CareerViewProps {
   career: CareerInfo | null
@@ -11,21 +12,20 @@ export interface CareerViewProps {
 const CareerView = ({career}: CareerViewProps) => {
 
   return (
-    <div>
-      <div>
-        {career ? (<div>
-            <hr />
-            <CareerBaseInfo careerBaseInfo={career?.baseInfo} />
-            <hr />
-            <CareerBaseSkill careerBaseSkill={career?.skills} />
-            <hr />
-            <CareerIntroduce aboutMe={career?.aboutMe} />
-            <hr />
-            <CareerHist careerHist={career?.careerHist} />
-          </div>
-          ) : ''
-        }
+    <div style={{padding: "3rem"}}>
+      {career?.baseInfo?.infoDate ? (
+      <div style={{display: "flex", flexDirection: "column", gap: "1rem"}}>
+        <CareerBaseInfo careerBaseInfo={career?.baseInfo} />
+        <CareerBaseSkill careerBaseSkill={career?.skills} />
+        <CareerIntroduce aboutMe={career?.aboutMe} />
+        <CareerHist careerHist={career?.careerHist} />
+
+        <hr style={{marginTop: "2rem", marginBottom: "2rem"}}/>
+
+        <CareerIndivisual myProjects={career?.myProject} />
       </div>
+      ) : ''
+      }
     </div>
   )
 }

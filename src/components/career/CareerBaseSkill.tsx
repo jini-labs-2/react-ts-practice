@@ -7,16 +7,16 @@ export interface CareerBaseSkillProps {
 const CareerBaseSkill = ({careerBaseSkill}: CareerBaseSkillProps) => {
   return (
     <div>
-      CareerBaseSkill
+      <h2>スキル</h2>
       {careerBaseSkill ? (
         <table border={1} cellPadding={5} cellSpacing={0}>
         <tbody>
           <tr>
-            <th>Category</th>
+            <th className='th-depth-1 label-bgcolor'>得意分野</th>
             <td>{careerBaseSkill.category}</td>
           </tr>
           <tr>
-            <th>Skills</th>
+            <th className="label-bgcolor">得意分野</th>
             <td>
               <table border={1} cellPadding={5} cellSpacing={0}>
                 <tbody>
@@ -30,7 +30,7 @@ const CareerBaseSkill = ({careerBaseSkill}: CareerBaseSkillProps) => {
             </td>
           </tr>
           <tr>
-            <th>Department</th>
+            <th className="label-bgcolor">得意業務</th>
             <td>
               <table border={1} cellPadding={5} cellSpacing={0}>
                 <tbody>

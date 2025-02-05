@@ -62,7 +62,7 @@ const ViewProject = ({careerProject}: CareerProjectProps) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {careerProject.proces.map((proc, i) => (
+                      {careerProject.process.map((proc, i) => (
                         <tr key={i}>
                           <td>{proc.name}</td>
                           <td>{proc.ativation ? '✅' : '❌'}</td>
