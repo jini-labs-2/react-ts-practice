@@ -18,6 +18,19 @@ li {
   margin: 0 auto;
 }
 
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 8%;
+  background-color:rgb(113, 122, 114);
+  color: white;
+  border-radius: 50%;
+  padding: 13px 10px;
+  bax-shadow: 2px 2px 4px rgba(113, 122, 114, 0.3);
+  cursor: pointer;
+  z-index: 999;
+}
+
 @media (max-width: 1300px) {
   #wrap {
     width: 96%;

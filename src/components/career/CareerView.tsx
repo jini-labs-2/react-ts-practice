@@ -5,6 +5,7 @@ import CareerBaseSkill from './CareerBaseSkill'
 import CareerIntroduce from './CareerIntroduce'
 import CareerHist from './CareerHist'
 import CareerIndivisual from './CareerIndivisual'
+import FloatingButton from '../FloatingButton'
 
 export interface CareerViewProps {
   career: CareerInfo | null
@@ -18,11 +19,13 @@ const CareerView = ({career}: CareerViewProps) => {
         <CareerBaseInfo careerBaseInfo={career?.baseInfo} />
         <CareerBaseSkill careerBaseSkill={career?.skills} />
         <CareerIntroduce aboutMe={career?.aboutMe} />
+        <div id='career_hist'></div>
         <CareerHist careerHist={career?.careerHist} />
 
         <hr style={{marginTop: "2rem", marginBottom: "2rem"}}/>
 
         <CareerIndivisual myProjects={career?.myProject} />
+        <FloatingButton anker={'career_hist'}/>
       </div>
       ) : ''
       }
