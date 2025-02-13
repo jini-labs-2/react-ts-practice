@@ -15,17 +15,32 @@ function fetchDataFromServer(value: string) {
     { name: "suzuki", age: "50" },
   ];
 
+  if (!value) return [];
+
   return users.filter(user => user.name.includes(value))
 }
 
 const Home = () => {
   const [input, setInput] = useState("");
+  const [debouncedInput, setDevouncedInput] = useState(input);
   const [fetched, setFetched] = useState<User[]>([]);
 
   useEffect(() => {
-    const users = fetchDataFromServer(input);
+    const timerId = setTimeout(() => {
+      console.log('call callback');
+      setDevouncedInput(input);
+    }, 1000);
+
+    // cleanup function
+    return () => {
+      clearTimeout(timerId);
+    }
+  }, [input]);
+
+  useEffect(() => {
+    const users = fetchDataFromServer(debouncedInput);
     setFetched(users);
-  }, [input])
+  }, [debouncedInput])
   
   return (
     <div className='container'>
@@ -33,7 +48,10 @@ const Home = () => {
         <input
           placeholder='検索名前を入力してください。'
           value={input}
-          onChange={(event) => setInput(event.target.value)}
+          onChange={(event) => {
+            console.log('input changed')
+            setInput(event.target.value)
+          }}
         />
         <ul>
           {fetched.map((user) => (
