@@ -43,8 +43,8 @@ const Home = () => {
           }}
         />
         <ul>
-          {fetched.map((user) => (
-            <li key={user.name}>
+          {fetched.map((user, index) => (
+            <li key={index}>
               <span> {user.name} </span>
               <span> {user.age} </span>
             </li>

@@ -9,7 +9,8 @@ interface MenuItem {
 const mainMenu: MenuItem[] = [
   {to: '/home', name: 'home'},
   {to: '/about', name: 'about'},
-  {to: '/contact', name: 'contact'}
+  {to: '/contact', name: 'contact'},
+  {to: '/throttle', name: 'throttle'}
 ];
 
 const Header = () => {
