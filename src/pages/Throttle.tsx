@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import useThrottle from '../hooks/useThrottle';
 
 type LottoNumbers = [
   number,
@@ -23,6 +24,12 @@ function generateLottoNumbers() {
 const Throttle = () => {
   const lottoNumberGenerated = useRef<number>(Date.now());
   const [lottoNumbers, setLottoNumbers] = useState<LottoNumbers>([0,0,0,0,0,0]);
+  const throttledLottoNumbers = useThrottle(lottoNumbers);
+
+  useEffect(() => {
+    console.log(`throttledValue generated: ${throttledLottoNumbers}`)
+  }, [throttledLottoNumbers])
+
   const handleClick = () => {
     if ((Date.now() - lottoNumberGenerated.current) > 1000) {
       const newNumbers = generateLottoNumbers();
