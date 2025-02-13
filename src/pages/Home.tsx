@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useDevounce } from '../hooks/useDebounce';
 
 interface User {
   name: string;
@@ -22,20 +23,8 @@ function fetchDataFromServer(value: string) {
 
 const Home = () => {
   const [input, setInput] = useState("");
-  const [debouncedInput, setDevouncedInput] = useState(input);
+  const debouncedInput = useDevounce(input, 1000);
   const [fetched, setFetched] = useState<User[]>([]);
-
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      console.log('call callback');
-      setDevouncedInput(input);
-    }, 1000);
-
-    // cleanup function
-    return () => {
-      clearTimeout(timerId);
-    }
-  }, [input]);
 
   useEffect(() => {
     const users = fetchDataFromServer(debouncedInput);
