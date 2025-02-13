@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './layouts/Layout';
+import About from './pages/About';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/*" element={<h2>Not found page</h2>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
