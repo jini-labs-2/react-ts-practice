@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+import '../index.css'
 
 const Footer = () => {
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
   return (
     <footer id="footer" className={`theme-${theme}`}>

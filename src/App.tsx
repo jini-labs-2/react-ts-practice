@@ -8,9 +8,9 @@ import './index.css';
 import { ThemeContext } from './context/ThemeContext';
 
 function App() {
-  const [theme, setTheme] = useState<string>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       <div id='main' className='app'>
         <Layout>
           <Routes>
@@ -21,9 +21,9 @@ function App() {
           </Routes>
         </Layout>
       </div>
-      <button onClick={() => setTheme(theme === 'dark' ? 'light': 'dark')}>
+      {/* <button onClick={() => setTheme(theme === 'dark' ? 'light': 'dark')}>
           {theme === 'light'? 'dark' : 'light'}
-      </button>
+      </button> */}
     </ThemeContext.Provider>
   );
 }

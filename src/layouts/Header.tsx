@@ -15,7 +15,7 @@ const mainMenu: MenuItem[] = [
 ];
 
 const Header = () => {
-  const theme = useContext(ThemeContext);
+  const {theme, setTheme} = useContext(ThemeContext);
 
   return (
     <header id='header' className={`header theme-${theme}`}>
@@ -29,6 +29,9 @@ const Header = () => {
             >{item.name.toUpperCase()}</Link>
           ))}
         </div>
+        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+          {theme === 'light' ? 'dark' : 'light'}
+        </button>
       </div>
       <hr />
     </header>
