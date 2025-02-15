@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { ThemeContext } from '../context/ThemeContext';
+import '../index.css';
 
 interface MenuItem {
   to: string;
@@ -13,8 +15,10 @@ const mainMenu: MenuItem[] = [
 ];
 
 const Header = () => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <header id='header'>
+    <header id='header' className={`header theme-${theme}`}>
       <div className='header_wrap'>
         <div style={{margin: '12px'}} >
           {mainMenu.map((item, index) => (
