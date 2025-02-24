@@ -1,15 +1,16 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
-import App from '../App';
 
-export const Layout = () => {
+type LayoutProps = {
+  children: React.ReactNode;
+}
+
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <App />
-      <Outlet />
+        {children}
       <Footer />
     </>
   )
