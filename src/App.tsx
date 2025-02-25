@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
+import UseCallback from './pages/testhooks/UseCallback';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/hooks">
+            <Route path="usecallback" element={<UseCallback />} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<h2>Not found page</h2>} />
