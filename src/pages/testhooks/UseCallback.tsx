@@ -7,7 +7,7 @@ const UseCallback = () => {
   }, []);
   return (
     <div>
-      <CountButton onClick={increment} />
+      <CountButtonMemo onClick={increment} />
       <CountView count={count} />
     </div>
   )
@@ -33,4 +33,5 @@ function CountButton({onClick}: {onClick: () => void}) {
   )
 }
 
+export const CountButtonMemo = React.memo(CountButton);
 export default UseCallback
