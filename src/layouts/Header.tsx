@@ -8,6 +8,9 @@ interface MenuItem {
 
 const mainMenu: MenuItem[] = [
   {to: '/home', name: 'home'},
+  // {content
+  {to: '/counter', name: 'counter'},
+  // contenet}
   {to: '/about', name: 'about'},
   {to: '/contact', name: 'contact'}
 ];

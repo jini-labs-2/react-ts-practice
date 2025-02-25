@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
+import Counter from './pages/Counter';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/counter" element={<Counter />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<h2>Not found page</h2>} />
