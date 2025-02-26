@@ -8,6 +8,7 @@ interface MenuItem {
 
 const mainMenu: MenuItem[] = [
   {to: '/home', name: 'home'},
+  {to: '/user', name: 'user'},
   {to: '/about', name: 'about'},
   {to: '/contact', name: 'contact'}
 ];

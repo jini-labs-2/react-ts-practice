@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
+import Users from './pages/Users';
+import UserDetail from './pages/UserDetail';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/user" element={<Users />} />
+          <Route path="/user/:id" element={<UserDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<h2>Not found page</h2>} />
