@@ -6,6 +6,8 @@ import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
 import UseCallback from './pages/testhooks/UseCallback';
+import UseState from './pages/testhooks/UseState';
+import UseReducer from './pages/testhooks/UseReducer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/hooks">
             <Route path="usecallback" element={<UseCallback />} />
+            <Route path="usestate" element={<UseState />} />
+            <Route path="usereducer" element={<UseReducer />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

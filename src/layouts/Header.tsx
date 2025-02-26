@@ -9,6 +9,8 @@ interface MenuItem {
 const mainMenu: MenuItem[] = [
   {to: '/home', name: 'home'},
   {to: '/hooks/usecallback', name: 'usecallback'},
+  {to: '/hooks/usestate', name: 'usestate'},
+  {to: '/hooks/usereducer', name: 'usereducer'},
   {to: '/about', name: 'about'},
   {to: '/contact', name: 'contact'}
 ];
