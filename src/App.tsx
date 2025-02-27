@@ -8,6 +8,7 @@ import './index.css';
 import UseCallback from './pages/testhooks/UseCallback';
 import UseState from './pages/testhooks/UseState';
 import UseReducer from './pages/testhooks/UseReducer';
+import UseForm from './pages/testhooks/UseForm';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/hooks">
+            <Route path="useform" element={<UseForm />} />
             <Route path="usecallback" element={<UseCallback />} />
             <Route path="usestate" element={<UseState />} />
             <Route path="usereducer" element={<UseReducer />} />
