@@ -20,12 +20,12 @@ const Header = () => {
   return (
     <header id='header'>
       <div className='header_wrap'>
-        <div style={{margin: '12px'}} >
+        <div className='top_nav'>
           {mainMenu.map((item, index) => (
             <Link
+              className='nav_item'
               key={index}
               to={item.to}
-              style={{textAlign: 'center', padding: '8px', margin: '12px'}}
             >{item.name.toUpperCase()}</Link>
           ))}
         </div>
