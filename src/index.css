@@ -19,6 +19,21 @@ code {
     monospace;
 }
 
+nav {
+  text-align: ceter;
+}
+
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+}
+
+li {
+  display: inline;
+  padding: 0.5rem;
+}
+
 .top_nav {
   display: flex;
   flex-wrap: wrap;
