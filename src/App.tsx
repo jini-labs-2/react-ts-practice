@@ -13,6 +13,7 @@ import UseId from './pages/testhooks/UseId';
 import UseLayoutEffect from './pages/testhooks/UseLayoutEffect';
 import UseTransition from './pages/testhooks/UseTransition';
 import UseRef from './pages/testhooks/UseRef';
+import UseInsertionEffect from './pages/testhooks/UseInsertionEffect';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/hooks">
+            <Route path="useinsertionEffect" element={<UseInsertionEffect />} />
             <Route path="useref" element={<UseRef />} />
             <Route path="usetransition" element={<UseTransition />} />
             <Route path="uselayouteffect" element={<UseLayoutEffect />} />
