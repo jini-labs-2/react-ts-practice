@@ -11,6 +11,7 @@ import UseReducer from './pages/testhooks/UseReducer';
 import UseForm from './pages/testhooks/UseForm';
 import UseId from './pages/testhooks/UseId';
 import UseLayoutEffect from './pages/testhooks/UseLayoutEffect';
+import UseTransition from './pages/testhooks/UseTransition';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/hooks">
+            <Route path="usetransition" element={<UseTransition />} />
             <Route path="uselayouteffect" element={<UseLayoutEffect />} />
             <Route path="useid" element={<UseId />} />
             <Route path="useform" element={<UseForm />} />

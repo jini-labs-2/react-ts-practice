@@ -8,6 +8,7 @@ interface MenuItem {
 
 const mainMenu: MenuItem[] = [
   {to: '/home', name: 'home'},
+  {to: '/hooks/usetransition', name: 'usetransition'},
   {to: '/hooks/uselayouteffect', name: 'uselayouteffect'},
   {to: '/hooks/useid', name: 'useid'},
   {to: '/hooks/useform', name: 'useform'},
