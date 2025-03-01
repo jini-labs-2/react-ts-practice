@@ -5,6 +5,21 @@ import { TODO } from '../api/todo.type';
 import { generateRandom } from '../utils';
 import styled from 'styled-components';
 
+const Wrapper = styled.section`
+  width: 800px;
+  height: calc(100vh - 50px - 50px);
+  background-color: #eee;
+  margin: 0 auto;
+`;
+
+const Todo = () => {
+  return (
+    <Wrapper>
+      <TodoList />
+    </Wrapper>
+  )
+}
+
 const TodoTitleWrapper = styled.div`
   margin-bottom: 1rem;
   text-align: center; 
@@ -23,7 +38,7 @@ const Button = styled.input`
   margin: 1rem 0;
 `;
 
-const Todo = () => {
+const TodoList = () => {
   const [todos, setTodos] = useState<TODO[]>(todoList);
   const [inputValue, setInputValue] = useState<string>('');
 
