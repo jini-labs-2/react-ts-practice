@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import { Route, Routes } from 'react-router-dom';
 import './index.css';
+import StyledTest from './pages/StyledTest';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/styled-component" element={<StyledTest />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
