@@ -14,6 +14,7 @@ import UseLayoutEffect from './pages/testhooks/UseLayoutEffect';
 import UseTransition from './pages/testhooks/UseTransition';
 import UseRef from './pages/testhooks/UseRef';
 import UseInsertionEffect from './pages/testhooks/UseInsertionEffect';
+import UseId_2 from './pages/testhooks/UseId_2';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="usetransition" element={<UseTransition />} />
             <Route path="uselayouteffect" element={<UseLayoutEffect />} />
             <Route path="useid" element={<UseId />} />
+            <Route path="useid_2" element={<UseId_2 />} />
             <Route path="useform" element={<UseForm />} />
             <Route path="usecallback" element={<UseCallback />} />
             <Route path="usestate" element={<UseState />} />

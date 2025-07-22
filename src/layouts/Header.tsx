@@ -13,6 +13,7 @@ const mainMenu: MenuItem[] = [
   {to: '/hooks/usetransition', name: 'usetransition'},
   {to: '/hooks/uselayouteffect', name: 'uselayouteffect'},
   {to: '/hooks/useid', name: 'useid'},
+  {to: '/hooks/useid_2', name: 'useid_2'},
   {to: '/hooks/useform', name: 'useform'},
   {to: '/hooks/usecallback', name: 'usecallback'},
   {to: '/hooks/usestate', name: 'usestate'},
